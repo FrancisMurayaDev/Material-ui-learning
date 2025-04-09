@@ -20,7 +20,7 @@ Default Installation
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
-##  > Importing Typography and setting the variant.
+## > Importing Typography and setting the variant.
 
 ```jsx
 import { Typography } from "@mui/material";
@@ -75,13 +75,13 @@ For instance, you can use the component the anchor tag, `"a"`. Then use the `hre
 
 ```jsx
 <Typography variant="h6" fontSize="30px" align="center">
-     Good Evening, Keep Pushing!
-   </Typography>
+  Good Evening, Keep Pushing!
+</Typography>
 ```
 
-## > Button 
+## > Button
 
-Pre-styled buttons following material design principles. 
+Pre-styled buttons following material design principles.
 
 To use button, import it from `"@mui/material"`.
 
@@ -95,3 +95,48 @@ Destructuring
 import { Typography, Button } from "@mui/material";
 ```
 
+Using Button:
+
+```jsx
+<Button>Click Me</Button>
+```
+
+### The button has some variants.
+
+a. outlined - good for secondary actions.
+
+```jsx
+<Button variant="outlined">Click Me</Button>
+```
+
+b. contained - good for primary actions. eg. sign up.
+
+```JSX
+ <Button variant="contained">Sign up</Button>
+```
+
+c. text - this is the dafault.
+
+- best for actions within a page such as `read more`.
+
+```jsx
+<Button variant="text">Read More</Button>
+```
+
+### Button Colors
+
+MUI color options are applied using the color prop.
+
+The available colors are:
+
+- a. primary - blue
+
+- b. secondary - purple
+
+- c. success- green
+
+- d. error - red
+
+- e. warning - yellow
+
+- f. info - blue

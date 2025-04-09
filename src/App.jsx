@@ -1,6 +1,5 @@
 import { Typography, Button } from "@mui/material";
 
-
 function App() {
   return (
     <>
@@ -57,6 +56,40 @@ function App() {
       <Typography variant="h6" fontSize="30px" align="center" bgcolor="aqua">
         Good Evening, Keep Pushing!
       </Typography>
+
+      <Button variant="text">Read More</Button>
+
+      <Button variant="outlined">Click Me</Button>
+
+      <Button variant="contained">Sign up</Button>
+
+      <Typography variant="h3" align="center">
+        Button Colors
+      </Typography>
+
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+
+      <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+
+      <Button variant="outlined" color="success">
+        Success
+      </Button>
+
+      <Button variant="contained" color="error">
+        Error
+      </Button>
+
+      <Button variant="contained" color="warning">
+        Warning
+      </Button>
+
+      <Button variant="text" color="info">
+        Info
+      </Button>
     </>
   );
 }
