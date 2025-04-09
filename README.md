@@ -16,30 +16,29 @@ Why MUI:
 
 Default Installation
 
-```js
+```jsx
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
 ## Importing Typography and setting the variant.
 
-```js
-import {Typography} from "@mui/material"
+```jsx
+import { Typography } from "@mui/material";
 
-function App () {
+function App() {
   return (
     <>
       <Typography variant="h1">Material UI</Typography>
     </>
-  )
+  );
 }
 
 export default App;
 ```
 
-
 - Typography deals with style and appearace of text in a website.
 
-It takes a variant prop. 
+It takes a variant prop.
 
 #### Variant Prop:
 
@@ -52,6 +51,36 @@ There are upto 13 variants::
 5. caption
 6. overline
 
-Component prop can be used with variant prop where we want to keep the variant styling. 
+Component prop can be used with variant prop where we want to keep the variant styling.
+
+For instance, you can use the component the anchor tag, `"a"`. Then use the `href = ""` attribute to put the link.
+
+```jsx
+<Typography variant="body1" component="a" href="https://www.google.com">
+  Open Google
+</Typography>
+```
+
+- It is always important to include the variant.
+
+#### Another thing with typography, we can use CSS properties as if we are passing a prop.
+
+- Not all, just a few specified ones.
+
+```jsx
+<Typography variant="body1" fontWeight="bold">
+  Good Morning!
+</Typography>
+```
+
+````jsx
+<Typography variant="h6" fontSize="30px" align="center">
+     Good Evening, Keep Pushing!
+   </Typography>
+   ```
 
 
+
+
+
+````
