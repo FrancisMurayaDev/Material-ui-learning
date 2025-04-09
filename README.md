@@ -20,7 +20,7 @@ Default Installation
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
-## Importing Typography and setting the variant.
+##  > Importing Typography and setting the variant.
 
 ```jsx
 import { Typography } from "@mui/material";
@@ -73,14 +73,25 @@ For instance, you can use the component the anchor tag, `"a"`. Then use the `hre
 </Typography>
 ```
 
-````jsx
+```jsx
 <Typography variant="h6" fontSize="30px" align="center">
      Good Evening, Keep Pushing!
    </Typography>
-   ```
+```
 
+## > Button 
 
+Pre-styled buttons following material design principles. 
 
+To use button, import it from `"@mui/material"`.
 
+```jsx
+import { Button } from "@mui/material";
+```
 
-````
+Destructuring
+
+```jsx
+import { Typography, Button } from "@mui/material";
+```
+
