@@ -1,4 +1,6 @@
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, IconButton } from "@mui/material";
+import { IoMdSend } from "react-icons/io";
+import { MdAssignmentInd } from "react-icons/md";
 
 function App() {
   return (
@@ -102,6 +104,29 @@ function App() {
       <Button variant="contained" color="success" size="large">
         Large
       </Button>
+
+    <Typography variant="h4" align="center" >React Incons with Material UI</Typography>
+
+    <Button variant="contained" startIcon={<IoMdSend />
+} >Send</Button>
+
+
+<Button variant="contained" endIcon={<IoMdSend />
+} >Send</Button>
+
+<IconButton><IoMdSend />
+</IconButton>
+
+
+<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} disabled>Assignment</Button>
+
+<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} fullWidth>Assignment</Button>
+
+<Button variant="contained" color="primary" onClick={() => {
+  alert("I just got clicked!");
+}}>Click Me</Button>
+
+
     </>
   );
 }

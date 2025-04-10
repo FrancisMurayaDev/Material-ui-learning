@@ -184,7 +184,62 @@ The available colors are:
 
 Use: 
 
-- startIcon - to add an icon before the button text.
+- startIcon prop- to add an icon before the button text.
 
-- endIcon - to add an icon at the end of the button text.
+- endIcon prop- to add an icon at the end of the button text.
+
+
+Start by installing react-icons:
+
+` npm install react-icons`
+
+
+```jsx
+  <Button variant="contained" startIcon={<IoMdSend />
+} >Send</Button>
+
+
+<Button variant="contained" endIcon={<IoMdSend />
+} >Send</Button>
+```
+
+For a button that will only input an Icon without a text, we use `IconButton`.
+
+```jsx
+<IconButton> <IoMdSend /> 
+</IconButton>
+```
+
+### Disabling a Button
+
+To disable a button, pass in the disable prop. 
+
+```jsx
+<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} disabled>Assignment</Button>
+```
+
+### Making the Button Full Width
+
+To make the button full width of the parent element we use the `fullWidth prop`.
+
+
+```jsx
+<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} fullWidth>Assignment</Button>
+```
+
+The buttons can also recieve a click event by passing the `onClick` event handler.
+
+```jsx
+<Button variant="contained" color="primary" onClick={() => {
+  alert("I just got clicked!");
+}}>Click Me</Button>
+```
+
+## > Button Group
+
+A button group is used to group buttons. 
+
+
+
+
 
