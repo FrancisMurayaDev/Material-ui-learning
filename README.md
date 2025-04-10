@@ -550,3 +550,39 @@ Using `FormControlLabel` and `control` props.
 - `defaultChecked` to make the switch checked by default.
 
 - `disabled` to make the switch disabled by default.
+
+## Box
+
+Box is a wrapper/layout component that renders a `div`.
+
+- It gives access to `sx prop`,which is MUI styling engine shortcut for inline styles.
+
+- Primarily used for `layout` and `styling`.
+- To use, import {Box} from "@mui/material"
+
+```jsx
+<Box>
+  <Typography variant="h5">Good Morning</Typography>
+</Box>
+```
+
+You can use the `component` prop to change to the semantic element that you want to be rendered.
+
+```jsx
+<Box component={"section"}>
+  <Typography variant="body1">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+    soluta eius nam necessitatibus officia, earum quas porro consequuntur quia
+    non incidunt voluptatibus ea ipsa? Totam iure ea dolorum deserunt?
+  </Typography>
+</Box>
+```
+
+The above will render as a `section` semantic element.
+
+You can use `sx` prop to change the properties of that particular box.
+
+- Box component supports Material UI system properties. You can use CSS properties directly as styles in the Box component.
+
+- When you put a value, for instance `padding = {2}` MUI will multiply it by 8 to get the value in px.
+

@@ -15,6 +15,7 @@ import {
   FormLabel,
   Checkbox,
   Switch,
+  Box,
 } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
@@ -287,6 +288,33 @@ function App() {
         control={<Switch size="small" />}
         label="Enable dark mode"
       />
+      <br />
+
+      <Box>
+        <Typography variant="h5">Good Morning</Typography>
+      </Box>
+
+      <Box variant="section" display={"flex"} gap={2}>
+        <Box border={"2px solid red"} padding={2}>
+          <Typography variant="body1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            error soluta eius nam necessitatibus.
+          </Typography>
+        </Box>
+
+        <Box border={"2px solid red"} margin={2}>
+          <Typography variant="body1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            error soluta eius nam necessitatibus.
+          </Typography>
+        </Box>
+        <Box border={"2px solid red"}>
+          <Typography variant="body1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            error soluta eius nam necessitatibus.
+          </Typography>
+        </Box>
+      </Box>
     </>
   );
 }
