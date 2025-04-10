@@ -13,6 +13,7 @@ import {
   FormControlLabel,
   RadioGroup,
   FormLabel,
+  Checkbox, Switch, 
 } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
@@ -241,7 +242,7 @@ function App() {
 
       <FormControl>
         <InputLabel>where do you live:</InputLabel>
-        <Select sx={{ width: "300px" }} variant="standard">
+        <Select sx={{ width: "300px" }} variant="standard" value={""}>
           <MenuItem value="Kenya">Kenya</MenuItem>
           <MenuItem value="Uganda">Uganda</MenuItem>
           <MenuItem value="Tanzania">Tanzania</MenuItem>
@@ -266,7 +267,26 @@ function App() {
 
       <h1>CheckBox</h1>
 
-      
+      <Checkbox />
+      <br />
+
+     <FormControl>
+      <FormLabel>Which Languages are you good in?</FormLabel>
+      <FormControlLabel value={"HTML"} label="html" control={<Checkbox />} />
+      <FormControlLabel value={"CSS"} label="CSS" control={<Checkbox />} />
+      <FormControlLabel value={"JS"} label="JS" control={<Checkbox />} />
+     </FormControl>
+
+<h1>Switch</h1>
+
+<Switch />
+<br />
+
+<FormControlLabel control={<Switch size="small" />} label="Enable dark mode" />
+
+
+
+
     </>
   );
 }
