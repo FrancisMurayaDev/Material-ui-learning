@@ -238,6 +238,21 @@ The buttons can also recieve a click event by passing the `onClick` event handle
 ## > Button Group
 
 A button group is used to group buttons. 
+- The variant and other button props are specified in the ButtonGroup.
+- Click events are listened on individual buttons.
+- You can specify the orientation to verical, from horizontal which is default. 
+- However, not used to impliment a navgation menu. 
+
+```jsx
+<ButtonGroup variant="outlined" orientation="vertical">
+  <Button>Home</Button>
+  <Button>About Us</Button>
+  <Button>Contact</Button>
+</ButtonGroup>
+```
+
+
+
 
 
 

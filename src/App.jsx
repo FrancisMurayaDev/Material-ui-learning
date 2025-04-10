@@ -1,4 +1,4 @@
-import { Typography, Button, IconButton } from "@mui/material";
+import { Typography, Button, IconButton, ButtonGroup } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
 
@@ -122,9 +122,18 @@ function App() {
 
 <Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} fullWidth>Assignment</Button>
 
-<Button variant="contained" color="primary" onClick={() => {
+<Button variant="outlined" color="primary" onClick={() => {
   alert("I just got clicked!");
 }}>Click Me</Button>
+
+<Typography variant="h4" align="center" fontWeight="bold">Button Group</Typography>
+
+<ButtonGroup variant="outlined" orientation="vertical">
+  <Button>Home</Button>
+  <Button>About Us</Button>
+  <Button>Contact</Button>
+</ButtonGroup>
+
 
 
     </>
