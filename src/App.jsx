@@ -13,7 +13,8 @@ import {
   FormControlLabel,
   RadioGroup,
   FormLabel,
-  Checkbox, Switch, 
+  Checkbox,
+  Switch,
 } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
@@ -270,23 +271,22 @@ function App() {
       <Checkbox />
       <br />
 
-     <FormControl>
-      <FormLabel>Which Languages are you good in?</FormLabel>
-      <FormControlLabel value={"HTML"} label="html" control={<Checkbox />} />
-      <FormControlLabel value={"CSS"} label="CSS" control={<Checkbox />} />
-      <FormControlLabel value={"JS"} label="JS" control={<Checkbox />} />
-     </FormControl>
+      <FormControl>
+        <FormLabel>Which Languages are you good in?</FormLabel>
+        <FormControlLabel value={"HTML"} label="html" control={<Checkbox />} />
+        <FormControlLabel value={"CSS"} label="CSS" control={<Checkbox />} />
+        <FormControlLabel value={"JS"} label="JS" control={<Checkbox />} />
+      </FormControl>
 
-<h1>Switch</h1>
+      <h1>Switch</h1>
 
-<Switch />
-<br />
+      <Switch />
+      <br />
 
-<FormControlLabel control={<Switch size="small" />} label="Enable dark mode" />
-
-
-
-
+      <FormControlLabel
+        control={<Switch size="small" />}
+        label="Enable dark mode"
+      />
     </>
   );
 }

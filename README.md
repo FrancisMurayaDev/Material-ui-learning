@@ -518,25 +518,25 @@ Used when a user wants to select multiple options from a list.
   <FormControlLabel value={"CSS"} label="CSS" control={<Checkbox/>} />
   <FormControlLabel value={"JS"} label="JS" control={<Checkbox/>} />
 ```
-It does not need a wrapper since it should support selecting of multiple elements. 
+
+It does not need a wrapper since it should support selecting of multiple elements.
 
 - You can specify the label so that the users know what they are answering using `FormControl` and `FormLabel` components.
 
-
 ## Switch
 
-It is similar to a checkbox. 
-- It provides a more intuitive toggle experience. 
-- Used for settings like darkmode, notifications or any off and on functionalities. 
+It is similar to a checkbox.
+
+- It provides a more intuitive toggle experience.
+- Used for settings like darkmode, notifications or any off and on functionalities.
 
 ### To use Switch import it from "@mui/material"
-
 
 ```jsx
 <Switch />
 ```
 
-- You can check the size to large, medium and small. 
+- You can check the size to large, medium and small.
 - You can also change the icon, check the switch documentation on MUI.
 
 ### Adding a Label to a Switch
@@ -550,7 +550,3 @@ Using `FormControlLabel` and `control` props.
 - `defaultChecked` to make the switch checked by default.
 
 - `disabled` to make the switch disabled by default.
-
-
-
-
