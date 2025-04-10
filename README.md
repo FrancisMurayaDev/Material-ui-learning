@@ -422,26 +422,25 @@ To use, import them from `"@mui/material"`
 The `sx={{}}` prop can be used to supply inline styles to material UI components. The reason we dont use `style={{}}`, it does not have access to the theme that we are working with. `sx` prop has access to the theme.
 
 ```jsx
-FormControl
-
+FormControl;
 ```
 
 ### Label
 
-To supply a `Label`, you wrap the whole MenuItem inside a `FormControl` component and then use the `InputLabel` component to specify the `Select` label. 
+To supply a `Label`, you wrap the whole MenuItem inside a `FormControl` component and then use the `InputLabel` component to specify the `Select` label.
 
 ```jsx
- <FormControl>
-      <InputLabel>where do you live:</InputLabel>
-      <Select sx={{ width: "300px" }} variant="contained" >
-        <MenuItem value="Kenya">Kenya</MenuItem>
-        <MenuItem value="Uganda">Uganda</MenuItem>
-        <MenuItem value="Tanzania">Tanzania</MenuItem>
-      </Select>
-    </FormControl>
+<FormControl>
+  <InputLabel>where do you live:</InputLabel>
+  <Select sx={{ width: "300px" }} variant="contained">
+    <MenuItem value="Kenya">Kenya</MenuItem>
+    <MenuItem value="Uganda">Uganda</MenuItem>
+    <MenuItem value="Tanzania">Tanzania</MenuItem>
+  </Select>
+</FormControl>
 ```
 
-You can also specify a variant for the `Select`as either: 
+You can also specify a variant for the `Select`as either:
 
 a. contained
 b. standard
@@ -449,3 +448,47 @@ c. filled
 
 ## > Radio Component
 
+Radio component in MUI is used where a user has to select one option from a group of choices.
+
+To use it, import `Radio` from `"@mui/material"`.
+
+- You can also change its color.
+
+```jsx
+<Radio color="secondary" />
+```
+
+### Using RadioGroup for Selection
+
+import { RadioGroup, Radio, FormControlLabel } from `"@mui/material"`
+
+- Then pass the `Radio` as a control inside `FormControlLabel` component.
+
+When wrapped in a RadioGroup, you can only be able to select one of the Radios.
+
+```jsx
+<RadioGroup>
+  <FormControlLabel value="banana" control={<Radio />} label="Apple" />
+  <FormControlLabel value="peas" control={<Radio />} label="peas" />
+  <FormControlLabel value="mango" control={<Radio />} label="Mango" />
+</RadioGroup>
+```
+
+To include a label that guides a user what they are currently answering. We wrap everything in a `FormControl` and add a `FormLabel`.
+
+```jsx
+<FormControl>
+  <FormLabel>What is your favourite fruit?</FormLabel>
+  <RadioGroup>
+    <FormControlLabel value="banana" control={<Radio />} label="Apple" />
+    <FormControlLabel value="peas" control={<Radio />} label="peas" />
+    <FormControlLabel value="mango" control={<Radio />} label="Mango" />
+  </RadioGroup>
+</FormControl>
+```
+
+### Setting a Default Selected Value
+
+If you want an option to be default selected, we can set `defaultValue` on the RadioGroup.
+
+- You specify the value.

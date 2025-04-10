@@ -6,7 +6,13 @@ import {
   TextField,
   InputAdornment,
   Select,
-  MenuItem, FormControl, InputLabel,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Radio,
+  FormControlLabel,
+  RadioGroup,
+  FormLabel,
 } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
@@ -233,18 +239,30 @@ function App() {
         Select and MenuItem
       </Typography>
 
-    <FormControl>
-      <InputLabel>where do you live:</InputLabel>
-      <Select sx={{ width: "300px" }} variant="standard">
-        <MenuItem value="Kenya">Kenya</MenuItem>
-        <MenuItem value="Uganda">Uganda</MenuItem>
-        <MenuItem value="Tanzania">Tanzania</MenuItem>
-      </Select>
-    </FormControl>
+      <FormControl>
+        <InputLabel>where do you live:</InputLabel>
+        <Select sx={{ width: "300px" }} variant="standard">
+          <MenuItem value="Kenya">Kenya</MenuItem>
+          <MenuItem value="Uganda">Uganda</MenuItem>
+          <MenuItem value="Tanzania">Tanzania</MenuItem>
+        </Select>
+      </FormControl>
 
-    <Typography variant="h5" align="center">Radio Component</Typography>
+      <Typography variant="h5" align="center">
+        Radio Component
+      </Typography>
 
+      <Radio color="secondary" />
+      <hr />
 
+      <FormControl>
+        <FormLabel>What is your favourite fruit?</FormLabel>
+        <RadioGroup defaultValue={"banana"}>
+          <FormControlLabel value="banana" control={<Radio />} label="Banana" />
+          <FormControlLabel value="peas" control={<Radio />} label="peas" />
+          <FormControlLabel value="mango" control={<Radio />} label="Mango" />
+        </RadioGroup>
+      </FormControl>
     </>
   );
 }
