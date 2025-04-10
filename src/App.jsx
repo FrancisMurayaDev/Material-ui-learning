@@ -16,6 +16,8 @@ import {
   Checkbox,
   Switch,
   Box,
+  Stack,
+  Divider,
 } from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
@@ -294,7 +296,11 @@ function App() {
         <Typography variant="h5">Good Morning</Typography>
       </Box>
 
-      <Box variant="section" display={"flex"} gap={2}>
+      <Stack
+        direction={"row"}
+        gap={4}
+        divider={<Divider orientation={"vertical"} flexItem />}
+      >
         <Box border={"2px solid red"} padding={2}>
           <Typography variant="body1">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -314,7 +320,9 @@ function App() {
             error soluta eius nam necessitatibus.
           </Typography>
         </Box>
-      </Box>
+      </Stack>
+
+      <br />
     </>
   );
 }

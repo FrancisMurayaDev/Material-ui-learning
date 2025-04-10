@@ -586,3 +586,70 @@ You can use `sx` prop to change the properties of that particular box.
 
 - When you put a value, for instance `padding = {2}` MUI will multiply it by 8 to get the value in px.
 
+## Stack
+
+Stack is a layout component that helps stack children vertically or horizontally with consistent spacing.
+
+- It manages layout in either horizontal or vertical axis.
+
+- To use it, import it too.
+
+- By default, it stack the children in a column.
+
+- We use `direction` prop to set it `row` or `column`.
+
+```jsx
+<Stack direction={"row"}>
+  <Box border={"2px solid red"} padding={2}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+
+  <Box border={"2px solid red"} margin={2}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+  <Box border={"2px solid red"}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+</Stack>
+```
+
+- You can also add a `gap` prop, to apply between the child elements.
+- We use `divider` component to insert a component between the child elements. You import it from `@mui/material`.
+- We pass in the Divider component using divider prop and specify the orientation of the divider. (vertical or horizontal).
+
+```jsx
+<Stack
+  direction={"row"}
+  gap={4}
+  divider={<Divider orientation={"vertical"} flexItem />}
+>
+  <Box border={"2px solid red"} padding={2}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+
+  <Box border={"2px solid red"} margin={2}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+  <Box border={"2px solid red"}>
+    <Typography variant="body1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error
+      soluta eius nam necessitatibus.
+    </Typography>
+  </Box>
+</Stack>
+```
