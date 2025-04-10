@@ -90,6 +90,18 @@ function App() {
       <Button variant="text" color="info">
         Info
       </Button>
+
+      <Typography variant="h3" align="center" fontSize="bold">
+        Button Size
+      </Typography>
+
+      <Button variant="contained" color="primary" size="small">
+        Small
+      </Button>
+
+      <Button variant="contained" color="success" size="large">
+        Large
+      </Button>
     </>
   );
 }

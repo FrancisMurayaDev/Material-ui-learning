@@ -140,3 +140,51 @@ The available colors are:
 - e. warning - yellow
 
 - f. info - blue
+
+```jsx
+ <Button variant="contained" color="primary">
+        Primary
+      </Button>
+
+
+  <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+
+  <Button variant="outlined" color="success">
+        Success
+      </Button>
+
+  <Button variant="contained" color="error">
+        Error
+      </Button>
+
+  <Button variant="contained" color="warning">
+        Warning
+      </Button>
+
+  <Button variant="text" color="info">
+        Info
+      </Button>
+```
+
+### Button Sizes
+
+- small
+- medium - the default size.
+- large
+
+```js
+<Button variant="contained" color="primary" size="small">Small</Button>
+
+<Button variant="contained" color="success" size="large">Large</Button>
+```
+
+### Adding Icons to a Button
+
+Use: 
+
+- startIcon - to add an icon before the button text.
+
+- endIcon - to add an icon at the end of the button text.
+
