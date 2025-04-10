@@ -492,3 +492,20 @@ To include a label that guides a user what they are currently answering. We wrap
 If you want an option to be default selected, we can set `defaultValue` on the RadioGroup.
 
 - You specify the value.
+
+```jsx
+<FormControl>
+  <FormLabel>What is your favourite fruit?</FormLabel>
+  <RadioGroup defaultValue={"banana"}>
+    <FormControlLabel value="banana" control={<Radio />} label="Banana" />
+    <FormControlLabel value="peas" control={<Radio />} label="peas" />
+    <FormControlLabel value="mango" control={<Radio />} label="Mango" />
+  </RadioGroup>
+</FormControl>
+```
+
+## > CheckBox Component
+
+Used when a user wants to select multiple options from a list.
+
+- Unlike radio buttons which allow only one selection, checkbox support multiple selections.
