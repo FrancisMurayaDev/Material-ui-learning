@@ -1,6 +1,16 @@
-import { Typography, Button, IconButton, ButtonGroup } from "@mui/material";
+import {
+  Typography,
+  Button,
+  IconButton,
+  ButtonGroup,
+  TextField,
+  InputAdornment,
+  Select,
+  MenuItem, FormControl, InputLabel,
+} from "@mui/material";
 import { IoMdSend } from "react-icons/io";
 import { MdAssignmentInd } from "react-icons/md";
+import { FaDollarSign } from "react-icons/fa6";
 
 function App() {
   return (
@@ -105,35 +115,134 @@ function App() {
         Large
       </Button>
 
-    <Typography variant="h4" align="center" >React Incons with Material UI</Typography>
+      <Typography variant="h4" align="center">
+        React Incons with Material UI
+      </Typography>
 
-    <Button variant="contained" startIcon={<IoMdSend />
-} >Send</Button>
+      <Button variant="contained" startIcon={<IoMdSend />}>
+        Send
+      </Button>
 
+      <Button variant="contained" endIcon={<IoMdSend />}>
+        Send
+      </Button>
 
-<Button variant="contained" endIcon={<IoMdSend />
-} >Send</Button>
+      <IconButton>
+        <IoMdSend />
+      </IconButton>
 
-<IconButton><IoMdSend />
-</IconButton>
+      <Button
+        variant="contained"
+        color="secondary"
+        startIcon={<MdAssignmentInd />}
+        disabled
+      >
+        Assignment
+      </Button>
 
+      <Button
+        variant="contained"
+        color="secondary"
+        startIcon={<MdAssignmentInd />}
+        fullWidth
+      >
+        Assignment
+      </Button>
 
-<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} disabled>Assignment</Button>
+      <Button
+        variant="outlined"
+        color="primary"
+        onClick={() => {
+          alert("I just got clicked!");
+        }}
+      >
+        Click Me
+      </Button>
 
-<Button variant="contained" color="secondary" startIcon={<MdAssignmentInd />} fullWidth>Assignment</Button>
+      <Typography variant="h4" align="center" fontWeight="bold">
+        Button Group
+      </Typography>
 
-<Button variant="outlined" color="primary" onClick={() => {
-  alert("I just got clicked!");
-}}>Click Me</Button>
+      <ButtonGroup variant="outlined" orientation="vertical">
+        <Button>Home</Button>
+        <Button>About Us</Button>
+        <Button>Contact</Button>
+      </ButtonGroup>
 
-<Typography variant="h4" align="center" fontWeight="bold">Button Group</Typography>
+      <Typography variant="h5" align="center">
+        TextField
+      </Typography>
 
-<ButtonGroup variant="outlined" orientation="vertical">
-  <Button>Home</Button>
-  <Button>About Us</Button>
-  <Button>Contact</Button>
-</ButtonGroup>
+      <TextField label="first name" variant="outlined"></TextField>
 
+      <Typography variant="h4" align="center">
+        Text Field Variants
+      </Typography>
+
+      <TextField label="outlined" variant="outlined"></TextField>
+      <TextField label="filled" variant="filled"></TextField>
+      <TextField label="standard" variant="standard"></TextField>
+
+      <Typography variant="h5" align="center">
+        TextField Types
+      </Typography>
+
+      <TextField variant="outlined" type="text" label="text"></TextField>
+      <TextField variant="outlined" type="number" label="number"></TextField>
+      <TextField
+        variant="outlined"
+        type="password"
+        label="password"
+      ></TextField>
+      <TextField variant="outlined" type="email" label="email"></TextField>
+
+      <TextField
+        variant="outlined"
+        label="password"
+        type="password"
+      ></TextField>
+
+      <Typography variant="h6" align="center">
+        Placeholder and HelperText
+      </Typography>
+
+      <TextField
+        variant="outlined"
+        label="firstName"
+        placeholder="enter first name"
+        helperText="Your first name according to your national ID"
+        required
+        error={false}
+        fullWidth
+        multiline
+        minRows={3}
+      ></TextField>
+
+      <TextField
+        label="enter amount"
+        variant="outlined"
+        color="primary"
+        slotProps={{
+          input: {
+            startAdornment: <InputAdornment>{<FaDollarSign />}</InputAdornment>,
+          },
+        }}
+      ></TextField>
+
+      <Typography variant="h4" align="center">
+        Select and MenuItem
+      </Typography>
+
+    <FormControl>
+      <InputLabel>where do you live:</InputLabel>
+      <Select sx={{ width: "300px" }} variant="standard">
+        <MenuItem value="Kenya">Kenya</MenuItem>
+        <MenuItem value="Uganda">Uganda</MenuItem>
+        <MenuItem value="Tanzania">Tanzania</MenuItem>
+      </Select>
+    </FormControl>
+
+    <Typography variant="h5" align="center">Radio Component</Typography>
 
 
     </>
